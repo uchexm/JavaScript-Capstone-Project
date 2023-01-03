@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  padding: 2% 10%;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  width: 50vw;
+  justify-content: center;
+}
+
+nav li {
+  list-style: none;
+  padding: 0 5%;
+  cursor: pointer;
+}
+
+nav li:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+#logo {
+  border: 1px solid black;
+  border-radius: 100%;
+  padding: 2%;
+  width: 75px;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
