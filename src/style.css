@@ -31,9 +31,9 @@ nav li:hover {
   font-weight: 700;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
+.flex {
+  display: flex;
+  align-items: center;
 }
 
 #logo {
@@ -44,7 +44,40 @@ footer {
   text-align: center;
 }
 
-.flex {
+#movie-container {
+  padding: 5% 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+}
+
+.item-data {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.item-data > div {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#movie-container > div {
+  background-color: whitesmoke;
+}
+
+#movie-container > div > div:first-child {
+  background-color: gray;
+  height: 50vh;
+}
+
+#movie-container > div > div:last-child {
+  padding: 1em;
+}
+
+#movie-container > div svg {
+  align-self: center;
+  border: 0;
+  font-size: 1.5em;
+  cursor: pointer;
 }
