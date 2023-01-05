@@ -64,6 +64,7 @@ nav li:hover {
 
 #movie-container > div {
   background-color: whitesmoke;
+  width: 20vw;
 }
 
 #movie-container > div > div:first-child {
@@ -80,4 +81,9 @@ nav li:hover {
   border: 0;
   font-size: 1.5em;
   cursor: pointer;
+}
+
+#movie-container img {
+  width: 100%;
+  height: 100%;
 }

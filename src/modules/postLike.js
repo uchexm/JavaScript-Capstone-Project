@@ -8,5 +8,7 @@ export default async (item) => {
       item_id: `${item}`,
     }),
   })
-    .then((response) => response);
+    .then(() => {
+      document.getElementById(`${item}`).querySelector('.likes-count').innerHTML = +document.getElementById(`${item}`).querySelector('.likes-count').innerHTML + 1;
+    });
 };
