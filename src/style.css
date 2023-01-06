@@ -64,7 +64,7 @@ nav li:hover {
 
 #movie-container > div {
   background-color: whitesmoke;
-  width: 20vw;
+  width: 250px;
 }
 
 #movie-container > div > div:first-child {
@@ -111,14 +111,16 @@ nav li:hover {
   border: none;
   background: none;
 }
+
 #comments-container {
   overflow: auto;
-  max-height: 35vh;
+  max-height: 25vh;
 }
 
-h1 {
-  font-size: 2.5rem;
+h2 {
+  font-size: 1.5rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 p {
@@ -126,27 +128,51 @@ p {
 }
 
 /* -------------------------- */
+
 /* CLASSES TO MAKE MODAL WORK */
+
 .hidden {
   display: none;
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-
   background-color: white;
-  padding: 6rem;
+  padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.modal h1 {
+  text-align: center;
+}
+
+#modal-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+#comment-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+}
+
+.sub-details {
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -155,6 +181,7 @@ p {
   backdrop-filter: blur(3px);
   z-index: 5;
 }
+
 #addCommentForm {
   display: grid;
   gap: 20px;
