@@ -115,30 +115,31 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-npm init
+- Install git in your computer.
+- Install a code editor.
+- And web browser to view the output.
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-cd my-folder
-git clone git@github.com:uchexm/JavaScript-Capstone-Project.git
+- cd my-folder
+- git clone git@github.com:uchexm/JavaScript-Capstone-Project.git
 
 ### Install
 
 Install this project with:
 
-cd my-project
-npm install
+- cd my-project
+- Run npm install to install the dependencies.
 
 ### Usage
 
 To run the project, execute the following command:
 
-npm run build
-npm start
+- npm run build
+- npm start
+- Open the dist/index.html file with a browser.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,9 +149,9 @@ npm start
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/c00p75)
+- Twitter: [@twitterhandle](https://twitter.com/GeorgeMsapenda)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/george-m-sapenda-593750201/)
 
 👤 **Uchechi Nwaka**
 
@@ -192,7 +193,7 @@ If you like this project give it a star
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse Inc for this project
+We would like to thank Microverse Inc for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
