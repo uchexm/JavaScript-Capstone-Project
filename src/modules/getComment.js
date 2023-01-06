@@ -1,13 +1,16 @@
-export default async (id) => {
+export const commentCounter = () => {
+  const counter = document.querySelector(
+    '#comments-container',
+  ).childElementCount;
+  return counter;
+};
+export const getComment = async (id) => {
   try {
     await fetch(
       `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/zzwfsFxqWArAT5ak4r3D/comments?item_id=${id}`,
     )
       .then((response) => response.json())
       .then((json) => {
-        document.getElementById(
-          'comment-header',
-        ).innerHTML = `COMMENTS (${json.length}) `;
         document.getElementById('comments-container').innerHTML = '';
         json.forEach((i) => {
           const comment = `${i.creation_date} ${i.username}: ${i.comment}`;
@@ -20,6 +23,9 @@ export default async (id) => {
             .getElementById('comments-container')
             .appendChild(commentElement);
         });
+        document.getElementById(
+          'comment-header',
+        ).innerHTML = `COMMENTS (${commentCounter()}) `;
       });
   } catch {
     document.getElementById('comments-container').innerHTML = '';
