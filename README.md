@@ -41,6 +41,7 @@ After you're finished please remove all the comments and instructions!
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [🎞 Video Link ](#-video-link-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -104,6 +105,14 @@ After you're finished please remove all the comments and instructions!
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://uchexm.github.io/JavaScript-Capstone-Project/dist/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Video Link -->
+
+## 🎞 Video Link <a name="video-link"></a>
+
+- [Presentation Video Link](https://drive.google.com/file/d/1F_ZU0yVvl1iwZLIJKo1uUHLZAb7A_DJa/view?usp=share_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
