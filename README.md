@@ -24,7 +24,7 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
 
-  <img src="./src/murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./src/modules/murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Movie Site</b></h3>
