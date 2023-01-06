@@ -1,7 +1,5 @@
 export const commentCounter = () => {
-  const counter = document.querySelector(
-    '#comments-container',
-  ).childElementCount;
+  const counter = document.querySelector('#comments-container').childElementCount;
   return counter;
 };
 export const getComment = async (id) => {
@@ -19,16 +17,12 @@ export const getComment = async (id) => {
 
           // Append the comment to the comments container
 
-          document
-            .getElementById('comments-container')
-            .appendChild(commentElement);
+          document.getElementById('comments-container').appendChild(commentElement);
         });
-        document.getElementById(
-          'comment-header',
-        ).innerHTML = `COMMENTS (${commentCounter()}) `;
+        document.getElementById('comment-header').innerHTML = `COMMENTS (${commentCounter()}) `;
       });
   } catch {
     document.getElementById('comments-container').innerHTML = '';
-    document.getElementById('comment-header').innerHTML = 'COMMENTS (0) ';
+    document.getElementById('comment-header').innerHTML = 'COMMENTS (0)';
   }
 };

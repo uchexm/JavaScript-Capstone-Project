@@ -1,33 +1,8 @@
 // API movie IDs from movieDB API
-
-export const movieIDs = [
-  '76600',
-  '661374',
-  '877269',
-  '436270',
-  '899112',
-  '744594',
-  '19995',
-  '361743',
-  '668482',
-  '555604',
-  '674324',
-  '593643',
-  '505642',
-  '315162',
-  '804095',
-  '791177',
-  '545611',
-  '414906',
-  '715931',
-  '546554',
-];
+export const movieIDs = ['76600', '661374', '877269', '436270', '899112', '744594', '19995', '361743', '668482', '555604', '674324', '593643', '505642', '315162', '804095', '791177', '545611', '414906', '715931', '546554'];
 
 // Function to retrieve API data and append it to DOM
 export const retrieveMovieData = async () => {
-  // Add total movie count to navigation item
-  document.querySelector('#all-movies').innerHTML += ` (${movieIDs.length})`;
-
   // Define movie container element
   const movieContainer = document.querySelector('#movie-container');
 
@@ -35,9 +10,7 @@ export const retrieveMovieData = async () => {
   let likes;
 
   // Fetching likes data
-  await fetch(
-    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/zzwfsFxqWArAT5ak4r3D/likes/',
-  )
+  await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/zzwfsFxqWArAT5ak4r3D/likes/')
     .then((response) => response.json())
     .then((json) => {
       likes = json;
@@ -47,17 +20,14 @@ export const retrieveMovieData = async () => {
   const loadData = async (movieID, index) => {
     // Creating movie item element
     const item = document.createElement('div');
-    item.id = index;
+    item.id = movieID;
 
     // Creating div element for movie data
     const itemData = document.createElement('div');
     itemData.className = 'item-data';
 
     // Retrieve image data from API
-    await fetch(
-      `https://api.themoviedb.org/3/movie/${movieID}/images?api_key=31ecb28000e35ff5c8ed82886f5861ad`,
-      {},
-    )
+    await fetch(`https://api.themoviedb.org/3/movie/${movieID}/images?api_key=31ecb28000e35ff5c8ed82886f5861ad&language=en`, {})
       .then((response) => response.json())
       .then((json) => {
         const itemImg = document.createElement('div');
@@ -69,13 +39,11 @@ export const retrieveMovieData = async () => {
       });
 
     // Retrieve title data from API
-    await fetch(
-      `https://api.themoviedb.org/3/movie/${movieID}?api_key=31ecb28000e35ff5c8ed82886f5861ad&language=en-US`,
-      {},
-    )
+    await fetch(`https://api.themoviedb.org/3/movie/${movieID}?api_key=31ecb28000e35ff5c8ed82886f5861ad&language=en-US`, {})
       .then((response) => response.json())
       .then((json) => {
         const itemTitle = document.createElement('span');
+        itemTitle.className = 'movie-title';
         itemTitle.innerHTML = json.original_title;
         itemData.appendChild(itemTitle);
       });
@@ -91,14 +59,9 @@ export const retrieveMovieData = async () => {
 
     // Adding likes data to movie item in DOM
     try {
-      const movieLikes = likes.find(
-        (arr) => arr.item_id === index.toString(),
-      ).likes;
+      const movieLikes = likes.find((arr) => arr.item_id === index.toString()).likes;
       likesData.innerHTML += `<span class="likes-count">${movieLikes}</span> <span> Likes</span>`;
-    } catch {
-      likesData.innerHTML
-        += '<span class="likes-count">0</span> <span> Likes</span>';
-    }
+    } catch { likesData.innerHTML += '<span class="likes-count">0</span> <span> Likes</span>'; }
 
     likesContainer.appendChild(likesData);
 
@@ -112,7 +75,7 @@ export const retrieveMovieData = async () => {
     const commentBtn = document.createElement('button');
     commentBtn.innerHTML = 'Comments';
     item.appendChild(commentBtn);
-    commentBtn.classList.add('show-modal'); // Added class to button
+    commentBtn.classList.add('show-modal');
 
     // Append movie item to body
     movieContainer.appendChild(item);

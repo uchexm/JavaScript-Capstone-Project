@@ -20,39 +20,20 @@
   <main>
     <div id="movie-container"> </div>
     <div class="modal hidden">
-        
       <button class="close-modal">&times;</button>
-      <h1 id="comment-header">
-        COMMENTS
-        
-      </h1>
-      <div id="comments-container"></div>
+      <div id="modal-img-container"><img id="modal-img" src="" alt="movie poster"></div>
+      <div id="movie-details"></div>
+      <div id="comment-section">
+        <h2 id="comment-header">COMMENTS</h2>
+        <div id="comments-container"></div>
+      </div>
       <div class="add-comment-form">
-        <h2 class="popup-comments-title">
-          Add your comments<span id="addCOmment"></span>
-        </h2>
+        <h2 class="popup-comments-title">Add your comments<span id="addCOmment"></span></h2>
         <form id="addCommentForm">
-          <input
-            type="text"
-            placeholder="Your name..."
-            name="name"
-            id="name"
-          />
-          <input
-            type="hidden"
-            placeholder="Your name..."
-            name="movieId"
-            value="${movieId}"
-          />
-          <textarea
-            name="comment"
-            id="comment"
-            cols="30"
-            rows="8"
-            placeholder="Your comment..."
-            name="comment"
-          ></textarea>
-          <input type="submit" value="Submit" />
+          <input type="text" placeholder="Your name..." name="name" id="name" required/>
+          <input type="hidden" placeholder="Your name..." name="movieId" value="${movieId}" required/>
+          <textarea name="comment" id="comment" cols="30" rows="8" placeholder="Your comment..." name="comment"></textarea>
+          <input type="submit" value="Submit" id="submit"/>
         </form>
       </div>
     </div>

@@ -1,6 +1,6 @@
 /* @jest-environment jsdom */
 
-import { commentCounter } from './getComment.js';
+import { commentCounter } from '../modules/getComment.js';
 
 document.body.innerHTML = `
 <div id="comments-container">
